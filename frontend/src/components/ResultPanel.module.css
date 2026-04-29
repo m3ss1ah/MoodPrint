@@ -1,0 +1,216 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  height: 100%;
+  overflow-y: auto;
+  padding-right: 4px;
+  animation: fadeIn 0.4s ease;
+}
+
+.sectionLabel {
+  font-size: 9px;
+  letter-spacing: 0.18em;
+  color: var(--text-muted);
+  padding-top: 4px;
+}
+
+/* Mood card */
+.moodCard {
+  background: var(--bg-panel);
+  border: 1.5px solid;
+  border-radius: var(--radius-lg);
+  padding: 24px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-align: center;
+  animation: fadeIn 0.5s ease;
+}
+
+.moodIcon {
+  font-size: 32px;
+  margin-bottom: 4px;
+}
+
+.moodName {
+  font-family: var(--font-display);
+  font-size: 28px;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+}
+
+.moodDesc {
+  font-size: 11px;
+  color: var(--text-secondary);
+  max-width: 280px;
+  line-height: 1.5;
+}
+
+.confidence {
+  display: flex;
+  align-items: baseline;
+  gap: 10px;
+  margin-top: 8px;
+}
+
+.confLabel {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.confVal {
+  font-family: var(--font-display);
+  font-size: 22px;
+  font-weight: 700;
+}
+
+.confBar {
+  width: 100%;
+  height: 3px;
+  background: var(--border-dim);
+  border-radius: 2px;
+  overflow: hidden;
+}
+
+.confFill {
+  height: 100%;
+  border-radius: 2px;
+  transition: width 1s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.mapBtn {
+  margin-top: 8px;
+  background: transparent;
+  border: 1px solid;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 11px;
+  padding: 7px 20px;
+  cursor: pointer;
+  letter-spacing: 0.06em;
+  transition: opacity 0.2s;
+}
+.mapBtn:hover { opacity: 0.7; }
+
+/* Sub-sections */
+.subLabel {
+  font-size: 9px;
+  letter-spacing: 0.14em;
+  color: var(--text-muted);
+  margin-bottom: 8px;
+}
+
+/* Probability bars */
+.probSection {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.probRow {
+  display: grid;
+  grid-template-columns: 80px 1fr 50px;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 8px;
+}
+.probRow:last-child { margin-bottom: 0; }
+
+.probLabel {
+  font-size: 11px;
+  font-weight: 700;
+}
+
+.probBarTrack {
+  height: 6px;
+  background: var(--border-dim);
+  border-radius: 3px;
+  overflow: hidden;
+}
+
+.probBarFill {
+  height: 100%;
+  border-radius: 3px;
+  transition: width 0.8s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.probPct {
+  font-size: 11px;
+  color: var(--text-secondary);
+  text-align: right;
+}
+
+/* LDA coords */
+.coordSection {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.coordGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 10px;
+}
+
+.coordCard {
+  background: var(--bg-card);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-sm);
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.coordAxis {
+  font-size: 9px;
+  letter-spacing: 0.12em;
+  color: var(--text-muted);
+}
+
+.coordVal {
+  font-size: 13px;
+  color: var(--text-accent);
+  font-weight: 700;
+}
+
+/* Feature list */
+.featSection {
+  background: var(--bg-panel);
+  border: 1px solid var(--border-dim);
+  border-radius: var(--radius-md);
+  padding: 14px 16px;
+}
+
+.featList {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.featItem {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 11px;
+}
+
+.featKey { color: var(--text-secondary); }
+.featVal { color: var(--text-accent); font-weight: 700; }
+
+/* Footer */
+.footer {
+  display: flex;
+  justify-content: space-between;
+  font-size: 10px;
+  color: var(--text-muted);
+  letter-spacing: 0.04em;
+  padding: 4px 0 8px;
+}

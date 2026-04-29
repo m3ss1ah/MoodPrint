@@ -1,0 +1,480 @@
+{
+  "classes": [
+    "Happy",
+    "Energetic",
+    "Calm",
+    "Sad"
+  ],
+  "n_features": 180,
+  "n_components": 3,
+  "feature_names": [
+    "MFCC_1_mean",
+    "MFCC_2_mean",
+    "MFCC_3_mean",
+    "MFCC_4_mean",
+    "MFCC_5_mean",
+    "MFCC_6_mean",
+    "MFCC_7_mean",
+    "MFCC_8_mean",
+    "MFCC_9_mean",
+    "MFCC_10_mean",
+    "MFCC_11_mean",
+    "MFCC_12_mean",
+    "MFCC_13_mean",
+    "MFCC_14_mean",
+    "MFCC_15_mean",
+    "MFCC_16_mean",
+    "MFCC_17_mean",
+    "MFCC_18_mean",
+    "MFCC_19_mean",
+    "MFCC_20_mean",
+    "MFCC_21_mean",
+    "MFCC_22_mean",
+    "MFCC_23_mean",
+    "MFCC_24_mean",
+    "MFCC_25_mean",
+    "MFCC_26_mean",
+    "MFCC_27_mean",
+    "MFCC_28_mean",
+    "MFCC_29_mean",
+    "MFCC_30_mean",
+    "MFCC_31_mean",
+    "MFCC_32_mean",
+    "MFCC_33_mean",
+    "MFCC_34_mean",
+    "MFCC_35_mean",
+    "MFCC_36_mean",
+    "MFCC_37_mean",
+    "MFCC_38_mean",
+    "MFCC_39_mean",
+    "MFCC_40_mean",
+    "MFCC_1_std",
+    "MFCC_2_std",
+    "MFCC_3_std",
+    "MFCC_4_std",
+    "MFCC_5_std",
+    "MFCC_6_std",
+    "MFCC_7_std",
+    "MFCC_8_std",
+    "MFCC_9_std",
+    "MFCC_10_std",
+    "MFCC_11_std",
+    "MFCC_12_std",
+    "MFCC_13_std",
+    "MFCC_14_std",
+    "MFCC_15_std",
+    "MFCC_16_std",
+    "MFCC_17_std",
+    "MFCC_18_std",
+    "MFCC_19_std",
+    "MFCC_20_std",
+    "MFCC_21_std",
+    "MFCC_22_std",
+    "MFCC_23_std",
+    "MFCC_24_std",
+    "MFCC_25_std",
+    "MFCC_26_std",
+    "MFCC_27_std",
+    "MFCC_28_std",
+    "MFCC_29_std",
+    "MFCC_30_std",
+    "MFCC_31_std",
+    "MFCC_32_std",
+    "MFCC_33_std",
+    "MFCC_34_std",
+    "MFCC_35_std",
+    "MFCC_36_std",
+    "MFCC_37_std",
+    "MFCC_38_std",
+    "MFCC_39_std",
+    "MFCC_40_std",
+    "Chroma_1_mean",
+    "Chroma_2_mean",
+    "Chroma_3_mean",
+    "Chroma_4_mean",
+    "Chroma_5_mean",
+    "Chroma_6_mean",
+    "Chroma_7_mean",
+    "Chroma_8_mean",
+    "Chroma_9_mean",
+    "Chroma_10_mean",
+    "Chroma_11_mean",
+    "Chroma_12_mean",
+    "Chroma_1_std",
+    "Chroma_2_std",
+    "Chroma_3_std",
+    "Chroma_4_std",
+    "Chroma_5_std",
+    "Chroma_6_std",
+    "Chroma_7_std",
+    "Chroma_8_std",
+    "Chroma_9_std",
+    "Chroma_10_std",
+    "Chroma_11_std",
+    "Chroma_12_std",
+    "SpContrast_1_mean",
+    "SpContrast_2_mean",
+    "SpContrast_3_mean",
+    "SpContrast_4_mean",
+    "SpContrast_5_mean",
+    "SpContrast_6_mean",
+    "SpContrast_7_mean",
+    "SpContrast_1_std",
+    "SpContrast_2_std",
+    "SpContrast_3_std",
+    "SpContrast_4_std",
+    "SpContrast_5_std",
+    "SpContrast_6_std",
+    "SpContrast_7_std",
+    "Tonnetz_1_mean",
+    "Tonnetz_2_mean",
+    "Tonnetz_3_mean",
+    "Tonnetz_4_mean",
+    "Tonnetz_5_mean",
+    "Tonnetz_6_mean",
+    "Tonnetz_1_std",
+    "Tonnetz_2_std",
+    "Tonnetz_3_std",
+    "Tonnetz_4_std",
+    "Tonnetz_5_std",
+    "Tonnetz_6_std",
+    "Mel_1_mean",
+    "Mel_2_mean",
+    "Mel_3_mean",
+    "Mel_4_mean",
+    "Mel_5_mean",
+    "Mel_6_mean",
+    "Mel_7_mean",
+    "Mel_8_mean",
+    "Mel_9_mean",
+    "Mel_10_mean",
+    "Mel_11_mean",
+    "Mel_12_mean",
+    "Mel_1_std",
+    "Mel_2_std",
+    "Mel_3_std",
+    "Mel_4_std",
+    "Mel_5_std",
+    "Mel_6_std",
+    "Mel_7_std",
+    "Mel_8_std",
+    "Mel_9_std",
+    "Mel_10_std",
+    "Mel_11_std",
+    "Mel_12_std",
+    "Centroid_mean",
+    "Centroid_std",
+    "Bandwidth_mean",
+    "Bandwidth_std",
+    "Rolloff_mean",
+    "Rolloff_std",
+    "ZCR_mean",
+    "ZCR_std",
+    "RMS_mean",
+    "RMS_std",
+    "Tempo",
+    "OnsetStrength",
+    "OnsetRate",
+    "PulseClarity",
+    "RMS_var",
+    "DynamicRange",
+    "SilenceRatio",
+    "CrestFactor",
+    "Harmonic_mean",
+    "Harmonic_std",
+    "Percussive_mean",
+    "Percussive_std",
+    "Pitch_mean",
+    "Pitch_std",
+    "Pitch_median",
+    "Pitch_range"
+  ],
+  "explained_variance_ratio": [
+    0.8244357705116272,
+    0.09165634959936142,
+    0.08390793204307556
+  ],
+  "cv_accuracy_mean": 0.5882225300092336,
+  "cv_accuracy_std": 0.02762224995186843,
+  "centroids": {
+    "Calm": [
+      -0.013880819082260132,
+      -0.8144373297691345,
+      0.48033520579338074
+    ],
+    "Energetic": [
+      0.2674556076526642,
+      0.6457788944244385,
+      0.720859706401825
+    ],
+    "Happy": [
+      1.2586452960968018,
+      0.018097789958119392,
+      -0.25050821900367737
+    ],
+    "Sad": [
+      -1.4321640729904175,
+      0.06428953260183334,
+      -0.1867530196905136
+    ]
+  },
+  "top_features": {
+    "LD1": [
+      {
+        "feature": "Mel_12_mean",
+        "weight": -9.959071159362793
+      },
+      {
+        "feature": "Mel_10_mean",
+        "weight": 9.50560188293457
+      },
+      {
+        "feature": "MFCC_3_mean",
+        "weight": 5.456244945526123
+      },
+      {
+        "feature": "Mel_1_mean",
+        "weight": -5.237568378448486
+      },
+      {
+        "feature": "Mel_4_mean",
+        "weight": 4.260984420776367
+      },
+      {
+        "feature": "MFCC_5_mean",
+        "weight": 3.723381757736206
+      },
+      {
+        "feature": "Mel_6_mean",
+        "weight": 3.5754547119140625
+      },
+      {
+        "feature": "Mel_5_mean",
+        "weight": 2.669856309890747
+      },
+      {
+        "feature": "Mel_3_mean",
+        "weight": 2.645456075668335
+      },
+      {
+        "feature": "MFCC_2_mean",
+        "weight": -2.5609867572784424
+      },
+      {
+        "feature": "Mel_8_mean",
+        "weight": -2.289876937866211
+      },
+      {
+        "feature": "Mel_9_mean",
+        "weight": -2.2609992027282715
+      },
+      {
+        "feature": "Mel_7_mean",
+        "weight": -2.212258815765381
+      },
+      {
+        "feature": "MFCC_4_mean",
+        "weight": 2.0216660499572754
+      },
+      {
+        "feature": "Mel_2_mean",
+        "weight": -1.7401646375656128
+      },
+      {
+        "feature": "Rolloff_mean",
+        "weight": 1.6047638654708862
+      },
+      {
+        "feature": "MFCC_9_mean",
+        "weight": -1.4033641815185547
+      },
+      {
+        "feature": "Centroid_mean",
+        "weight": -1.372948408126831
+      },
+      {
+        "feature": "MFCC_8_mean",
+        "weight": 1.3696784973144531
+      },
+      {
+        "feature": "RMS_mean",
+        "weight": 0.9549406170845032
+      }
+    ],
+    "LD2": [
+      {
+        "feature": "MFCC_2_mean",
+        "weight": -27.179819107055664
+      },
+      {
+        "feature": "Mel_11_mean",
+        "weight": -22.14576530456543
+      },
+      {
+        "feature": "MFCC_3_mean",
+        "weight": -18.207988739013672
+      },
+      {
+        "feature": "Mel_1_mean",
+        "weight": 14.17196273803711
+      },
+      {
+        "feature": "Mel_5_mean",
+        "weight": -9.77912712097168
+      },
+      {
+        "feature": "Mel_8_mean",
+        "weight": -9.237500190734863
+      },
+      {
+        "feature": "Mel_2_mean",
+        "weight": 8.908382415771484
+      },
+      {
+        "feature": "Mel_7_mean",
+        "weight": -8.61496639251709
+      },
+      {
+        "feature": "Mel_3_mean",
+        "weight": 8.304895401000977
+      },
+      {
+        "feature": "Mel_12_mean",
+        "weight": 7.227672576904297
+      },
+      {
+        "feature": "Mel_4_mean",
+        "weight": 6.009937763214111
+      },
+      {
+        "feature": "MFCC_6_mean",
+        "weight": 3.246267557144165
+      },
+      {
+        "feature": "Mel_10_mean",
+        "weight": -3.061267375946045
+      },
+      {
+        "feature": "Mel_9_mean",
+        "weight": -2.6861374378204346
+      },
+      {
+        "feature": "MFCC_10_mean",
+        "weight": -2.4174911975860596
+      },
+      {
+        "feature": "Mel_6_mean",
+        "weight": -2.061983108520508
+      },
+      {
+        "feature": "MFCC_4_mean",
+        "weight": -1.896907925605774
+      },
+      {
+        "feature": "MFCC_13_mean",
+        "weight": 1.4456398487091064
+      },
+      {
+        "feature": "MFCC_11_mean",
+        "weight": 1.3468530178070068
+      },
+      {
+        "feature": "Bandwidth_mean",
+        "weight": -1.3318365812301636
+      }
+    ],
+    "LD3": [
+      {
+        "feature": "Mel_9_mean",
+        "weight": -9.81049919128418
+      },
+      {
+        "feature": "MFCC_2_mean",
+        "weight": -8.013347625732422
+      },
+      {
+        "feature": "Mel_8_mean",
+        "weight": -6.55250883102417
+      },
+      {
+        "feature": "Mel_10_mean",
+        "weight": 5.854703903198242
+      },
+      {
+        "feature": "MFCC_4_mean",
+        "weight": 5.2212138175964355
+      },
+      {
+        "feature": "Mel_4_mean",
+        "weight": 5.178424835205078
+      },
+      {
+        "feature": "Mel_11_mean",
+        "weight": -4.933752536773682
+      },
+      {
+        "feature": "RMS_mean",
+        "weight": 4.7684807777404785
+      },
+      {
+        "feature": "Mel_6_mean",
+        "weight": 4.1019182205200195
+      },
+      {
+        "feature": "Mel_5_mean",
+        "weight": 4.072676658630371
+      },
+      {
+        "feature": "Mel_7_mean",
+        "weight": -3.272155284881592
+      },
+      {
+        "feature": "Harmonic_mean",
+        "weight": -3.0453646183013916
+      },
+      {
+        "feature": "Mel_3_mean",
+        "weight": 2.4859418869018555
+      },
+      {
+        "feature": "Percussive_mean",
+        "weight": -2.2371859550476074
+      },
+      {
+        "feature": "Mel_1_mean",
+        "weight": -2.1101572513580322
+      },
+      {
+        "feature": "MFCC_5_mean",
+        "weight": 1.9680202007293701
+      },
+      {
+        "feature": "MFCC_3_mean",
+        "weight": -1.3720850944519043
+      },
+      {
+        "feature": "Mel_2_mean",
+        "weight": 1.3516509532928467
+      },
+      {
+        "feature": "MFCC_8_mean",
+        "weight": 1.181130290031433
+      },
+      {
+        "feature": "Pitch_mean",
+        "weight": -1.1737523078918457
+      }
+    ]
+  },
+  "scalings_shape": [
+    180,
+    4
+  ],
+  "n_samples": 1802,
+  "class_counts": {
+    "Happy": 679,
+    "Energetic": 234,
+    "Calm": 251,
+    "Sad": 638
+  }
+}

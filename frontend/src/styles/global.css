@@ -1,0 +1,136 @@
+/* ── MoodPrint Global Styles ───────────────────────────────────────────── */
+
+@import url('https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&family=Syne:wght@400;600;700;800&display=swap');
+
+:root {
+  /* Base palette */
+  --bg-void:        #040508;
+  --bg-deep:        #080c14;
+  --bg-panel:       #0d1220;
+  --bg-card:        #111828;
+  --bg-hover:       #16203a;
+
+  /* Borders */
+  --border-dim:     #1a2540;
+  --border-glow:    #2a3f6f;
+  --border-active:  #3d6aff;
+
+  /* Text */
+  --text-primary:   #e8eeff;
+  --text-secondary: #7a8bb5;
+  --text-muted:     #3d4f75;
+  --text-accent:    #5c8aff;
+
+  /* Mood colors */
+  --happy:          #FFD700;
+  --happy-glow:     rgba(255, 215, 0, 0.15);
+  --energetic:      #FF4500;
+  --energetic-glow: rgba(255, 69, 0, 0.15);
+  --calm:           #00CED1;
+  --calm-glow:      rgba(0, 206, 209, 0.15);
+  --sad:            #8B7FFF;
+  --sad-glow:       rgba(139, 127, 255, 0.15);
+
+  /* System */
+  --accent:         #3d6aff;
+  --accent-dim:     rgba(61, 106, 255, 0.12);
+  --accent-glow:    rgba(61, 106, 255, 0.3);
+
+  /* Typography */
+  --font-display:   'Syne', sans-serif;
+  --font-mono:      'Space Mono', monospace;
+
+  /* Sizing */
+  --nav-h:          64px;
+  --status-h:       36px;
+  --radius-sm:      6px;
+  --radius-md:      12px;
+  --radius-lg:      20px;
+}
+
+/* ── Reset ─────────────────────────────────────────────────────────────── */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  height: 100%;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-void);
+  color: var(--text-primary);
+  font-family: var(--font-mono);
+  font-size: 14px;
+  line-height: 1.6;
+  overflow: hidden;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* ── Scrollbar ─────────────────────────────────────────────────────────── */
+::-webkit-scrollbar { width: 6px; height: 6px; }
+::-webkit-scrollbar-track { background: var(--bg-deep); }
+::-webkit-scrollbar-thumb {
+  background: var(--border-glow);
+  border-radius: 3px;
+}
+::-webkit-scrollbar-thumb:hover { background: var(--border-active); }
+
+/* ── Utility classes ───────────────────────────────────────────────────── */
+.mono { font-family: var(--font-mono); }
+.display { font-family: var(--font-display); }
+
+.text-sm  { font-size: 11px; }
+.text-xs  { font-size: 10px; letter-spacing: 0.08em; }
+.text-sec { color: var(--text-secondary); }
+.text-mut { color: var(--text-muted); }
+.text-acc { color: var(--text-accent); }
+
+/* ── Grid noise overlay ────────────────────────────────────────────────── */
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(61, 106, 255, 0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(61, 106, 255, 0.03) 1px, transparent 1px);
+  background-size: 40px 40px;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ── Loading spinner ───────────────────────────────────────────────────── */
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+.spinner {
+  width: 20px;
+  height: 20px;
+  border: 2px solid var(--border-glow);
+  border-top-color: var(--accent);
+  border-radius: 50%;
+  animation: spin 0.8s linear infinite;
+}
+
+/* ── Pulse animation ───────────────────────────────────────────────────── */
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.4; }
+}
+
+/* ── Fade in ───────────────────────────────────────────────────────────── */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+.fade-in { animation: fadeIn 0.4s ease forwards; }
+
+/* ── Glow keyframe ─────────────────────────────────────────────────────── */
+@keyframes glowPulse {
+  0%, 100% { box-shadow: 0 0 8px var(--accent-glow); }
+  50%       { box-shadow: 0 0 20px var(--accent-glow), 0 0 40px var(--accent-glow); }
+}
