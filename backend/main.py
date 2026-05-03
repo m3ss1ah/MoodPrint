@@ -371,5 +371,28 @@ async def metadata():
     return MODEL["metadata"]
 
 
+# ─────────────────────────────────────────────────────────────────────────────
+# Serve Static Frontend (for production deployment)
+# ─────────────────────────────────────────────────────────────────────────────
+from fastapi.staticfiles import StaticFiles
+from fastapi.responses import FileResponse
+
+STATIC_DIR = Path(__file__).resolve().parent / "static"
+
+if STATIC_DIR.exists():
+    # Mount the static directory to serve assets (JS/CSS)
+    app.mount("/assets", StaticFiles(directory=str(STATIC_DIR / "assets")), name="assets")
+
+    # Serve the index.html for the root route and any other unhandled routes (for React Router)
+    @app.get("/{full_path:path}")
+    async def serve_frontend(full_path: str):
+        file_path = STATIC_DIR / full_path
+        if file_path.exists() and file_path.is_file():
+            return FileResponse(str(file_path))
+        return FileResponse(str(STATIC_DIR / "index.html"))
+else:
+    print(f"⚠ Static directory not found at {STATIC_DIR}. Frontend will not be served.")
+
+
 if __name__ == "__main__":
     uvicorn.run("main:app", host="0.0.0.0", port=8000, reload=True)
