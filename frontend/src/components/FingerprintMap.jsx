@@ -1,6 +1,9 @@
 import React, { useEffect, useState, useRef } from "react";
-import Plot from "react-plotly.js";
+import Plotly from "plotly.js-dist-min";
+import createPlotlyComponent from "react-plotly.js/factory";
 import styles from "./FingerprintMap.module.css";
+
+const Plot = createPlotlyComponent(Plotly);
 
 const MOOD_COLORS = {
   Happy:     "#FFD700",
