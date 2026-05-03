@@ -19,9 +19,6 @@ data/**/*.mp3
 data/**/*.wav
 deam/
 deam\ dataset/
-models/*.pkl
-models/*.joblib
-models/dataset_projection.json
 
 # Keep directory structure but ignore contents
 !data/
