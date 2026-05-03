@@ -166,7 +166,8 @@ def extract_features(y: np.ndarray, sr: int) -> np.ndarray:
     onset_env = librosa.onset.onset_strength(y=y, sr=sr)
     onset_rate = len(librosa.onset.onset_detect(y=y, sr=sr)) / (len(y) / sr)
     pulse = librosa.beat.plp(onset_envelope=onset_env, sr=sr)
-    features.extend([float(tempo), float(np.mean(onset_env)),
+    tempo_val = float(tempo[0]) if hasattr(tempo, "__len__") else float(tempo)
+    features.extend([tempo_val, float(np.mean(onset_env)),
                      float(onset_rate), float(np.mean(pulse))])
 
     # Dynamics (4)
